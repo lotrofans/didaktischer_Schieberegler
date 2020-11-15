@@ -1,0 +1,454 @@
+<style>
+  input[type=range] {
+    /* height: 25px;*/
+    width: 100%;
+    -webkit-appearance: none;
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: #2497E3;
+    border-radius: 1px;
+    border: 0px solid #000000;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #2497E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #2497E3;
+  }
+
+  input[type=range]::-moz-range-track {
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: white;
+    border-radius: 1px;
+    border: 0px solid #000000;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #2497E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+  }
+
+  input[type=range]::-ms-track {
+    height: 5px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  input[type=range]::-ms-fill-lower {
+    background: #2497E3;
+    border: 0px solid #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+
+  input[type=range]::-ms-fill-upper {
+    background: #2497E3;
+    border: 0px solid #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #2497E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+  }
+
+  input[type=range]:focus::-ms-fill-lower {
+    background: #2497E3;
+  }
+
+  input[type=range]:focus::-ms-fill-upper {
+    background: #2497E3;
+  }
+
+  table {
+    border: 0 none;
+  }
+
+  .red-gradient-bar[type=range]::-webkit-slider-runnable-track {
+    background: #8A2387;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .red-gradient-bar[type=range]:focus::-webkit-slider-runnable-track {
+    background: #8A2387;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .red-gradient-bar[type=range]::-webkit-slider-thumb {
+    border: 1px solid #8A2387;
+    background: white;
+  }
+
+  .red-gradient-bar[type=range]::-moz-range-track {
+    background: #8A2387;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .red-gradient-bar[type=range]::-moz-range-thumb {
+    border: 1px solid #8A2387;
+    background: white;
+  }
+
+
+  /*rot*/
+  .red-bar[type=range]::-webkit-slider-runnable-track {
+    background: red;
+  }
+
+  .red-bar[type=range]:focus::-webkit-slider-runnable-track {
+    background: red;
+  }
+
+  .red-bar[type=range]::-webkit-slider-thumb {
+    border: 1px solid red;
+    background: white;
+  }
+
+  .red-bar[type=range]::-moz-range-track {
+    background: red;
+  }
+
+  .red-bar[type=range]::-moz-range-thumb {
+    border: 1px solid red;
+    background: white;
+  }
+
+  .blue-gradient-bar[type=range]::-webkit-slider-runnable-track {
+    background: red;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .blue-gradient-bar[type=range]:focus::-webkit-slider-runnable-track {
+    background: #56CCF2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .blue-gradient-bar[type=range]::-webkit-slider-thumb {
+    border: 1px solid blue;
+    background: white;
+  }
+
+  .blue-gradient-bar[type=range]::-moz-range-track {
+    background: #56CCF2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .blue-gradient-bar[type=range]::-moz-range-thumb {
+    border: 1px solid blue;
+    background: white;
+  }
+
+  .quepal-gradient-bar[type=range]::-webkit-slider-runnable-track {
+    background: #11998e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .quepal-gradient-bar[type=range]:focus::-webkit-slider-runnable-track {
+    background: #11998e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .quepal-gradient-bar[type=range]::-webkit-slider-thumb {
+    border: 1px solid #11998e;
+    background: white;
+  }
+
+  .quepal-gradient-bar[type=range]::-moz-range-track {
+    background: #11998e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .quepal-gradient-bar[type=range]::-moz-range-thumb {
+    border: 1px solid #11998e;
+    background: white;
+  }
+
+  /*amin*/
+
+  .amin-gradient-bar[type=range]::-webkit-slider-runnable-track {
+    background: #8E2DE2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .amin-gradient-bar[type=range]:focus::-webkit-slider-runnable-track {
+    background: #8E2DE2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .amin-gradient-bar[type=range]::-webkit-slider-thumb {
+    border: 1px solid #8E2DE2;
+    background: white;
+  }
+
+  .amin-gradient-bar[type=range]::-moz-range-track {
+    background: #8E2DE2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .amin-gradient-bar[type=range]::-moz-range-thumb {
+    border: 1px solid #8E2DE2;
+    background: white;
+  }
+
+  .martini-gradient-bar[type=range]::-webkit-slider-runnable-track {
+    background: #FDFC47;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24FE41, #FDFC47);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24FE41, #FDFC47);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  }
+
+  .martini-gradient-bar[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FDFC47;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24FE41, #FDFC47);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24FE41, #FDFC47);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .martini-gradient-bar[type=range]::-webkit-slider-thumb {
+    border: 1px solid #24FE41;
+    background: white;
+  }
+
+  .martini-gradient-bar[type=range]::-moz-range-track {
+    background: #FDFC47;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24FE41, #FDFC47);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24FE41, #FDFC47);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .martini-gradient-bar[type=range]::-moz-range-thumb {
+    border: 1px solid #24FE41;
+    background: white;
+  }
+
+  /*gelb:*/
+  .yellow-bar[type=range]::-webkit-slider-runnable-track {
+    background: yellow;
+  }
+
+  .yellow-bar[type=range]:focus::-webkit-slider-runnable-track {
+    background: yellow;
+  }
+
+  .yellow-bar[type=range]::-webkit-slider-thumb {
+    border: 1px solid yellow;
+    background: black;
+  }
+
+  .yellow-bar[type=range]::-moz-range-track {
+    background: yellow;
+  }
+
+  .yellow-bar[type=range]::-moz-range-thumb {
+    border: 1px solid yellow;
+    background: black;
+  }
+
+  /*violett*/
+  .violet-bar[type=range]::-webkit-slider-runnable-track {
+    background: violet;
+  }
+
+  .violet-bar[type=range]:focus::-webkit-slider-runnable-track {
+    background: violet;
+  }
+
+  .violet-bar[type=range]::-webkit-slider-thumb {
+    border: 1px solid violet;
+    background: white;
+  }
+
+  .violet-bar[type=range]::-moz-range-track {
+    background: violet;
+  }
+
+  .violet-bar[type=range]::-moz-range-thumb {
+    border: 1px solid violet;
+    background: white;
+  }
+
+  /*purple*/
+  .purple-bar[type=range]::-webkit-slider-runnable-track {
+    background: purple;
+  }
+
+  .purple-bar[type=range]:focus::-webkit-slider-runnable-track {
+    background: purple;
+  }
+
+  .purple-bar[type=range]::-webkit-slider-thumb {
+    border: 1px solid purple;
+    background: white;
+  }
+
+  .purple-bar[type=range]::-moz-range-track {
+    background: purple;
+  }
+
+  .purple-bar[type=range]::-moz-range-thumb {
+    border: 1px solid purple;
+    background: white;
+  }
+
+  .center {
+    margin: auto;
+    width: 60%;
+  }
+</style>
+<div style="border: 1px solid black; margin: 10px 0; padding: 10px 5px;">
+  <table width=100% style="border: 0;">
+    <colgroup>
+      <col width=20% style="text-align: left;" />
+      <col width=60% />
+      <col width=20% style="float: right;" />
+    </colgroup>
+    <tr>
+      <td>
+        Vertrauen und Freiheit
+      </td>
+      <td>
+        <input type="range" class="red-gradient-bar">
+      </td>
+      <td style="text-align:right">
+        Kontrolle und Struktur
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Neue Technik
+      </td>
+      <td>
+        <input type="range" class="blue-gradient-bar">
+      </td>
+      <td style="text-align:right">
+        Einfache Technik
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Asynchron
+      </td>
+      <td>
+        <input type="range" class="martini-gradient-bar">
+      </td>
+      <td style="text-align:right">
+        Synchron
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Offene Projektarbeit
+      </td>
+      <td>
+        <input type="range" class="amin-gradient-bar">
+      </td>
+      <td style="text-align:right">
+        Kleinschrittige Übungen
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Peerfeedback
+      </td>
+      <td>
+        <input type="range" class="quepal-gradient-bar">
+      </td>
+      <td style="text-align:right">
+        Feedback durch Lehrende
+      </td>
+    </tr>
+  </table>
+</div>
